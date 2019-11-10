@@ -1,4 +1,4 @@
-const button = document.querySelector('#result');
+const button = document.querySelector('#result')
 const style = {
     backgroundColor: 'darkorchid',
     color: 'aliceblue',
@@ -8,10 +8,10 @@ const style = {
 
 button.addEventListener('click', async() => {
     //Get value form input
-    const name1 = document.querySelector('#your-name').value;
-    const name2 = document.querySelector("#name-crush").value;
-    console.log(name1, name2);
-    //Call server, use library api
+    const name1 = document.querySelector('#your-name').value
+    const name2 = document.querySelector("#name-crush").value
+    console.log(name1, name2)
+        //Call server, use library api
     const result = await fetch(
         `https://love-calculator.p.rapidapi.com/getPercentage?sname=${name1}&fname=${name2}`, {
             headers: {
@@ -20,9 +20,9 @@ button.addEventListener('click', async() => {
             }
         }
     ).then((response) => {
-        return response.json();
+        return response.json()
     });
-    console.log(result);
-    //Show result on screen
-    move(result)
+    console.log(result)
+        //Show result on screen
+    move(name1, name2, result)
 });
