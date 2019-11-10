@@ -3,12 +3,12 @@ h1 {
     color: darkorchid;
 }
 
-.input-imformation {
+.input-information {
     display: flex;
     justify-content: center;
 }
 
-.input-imformation input[type="text"] {
+.input-information input[type="text"] {
     padding: 6px;
     width: 20%;
 }
